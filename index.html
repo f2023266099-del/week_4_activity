@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CampusMart — UMT Student Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <h1>CampusMart</h1>
+        <p class="subtitle">UMT Student Marketplace</p>
+      </div>
+      <button id="theme-toggle" type="button" aria-label="Toggle dark mode">🌙 Dark</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section aria-labelledby="latest-heading">
+      <div class="toolbar">
+        <h2 id="latest-heading">Latest listings</h2>
+        <p class="saved-badge">Saved: <span id="fav-count">0</span></p>
+      </div>
+
+      <div class="controls">
+        <div class="control-group">
+          <label for="search">Search listings</label>
+          <input id="search" type="search" placeholder="Try 'book' or 'mouse'" />
+        </div>
+
+        <div class="control-group">
+          <label for="category">Category</label>
+          <select id="category">
+            <option value="All">All</option>
+            <option value="Books">Books</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Stationery">Stationery</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label for="sort">Sort by</label>
+          <select id="sort">
+            <option value="newest">Newest</option>
+            <option value="price-asc">Price: low → high</option>
+            <option value="price-desc">Price: high → low</option>
+          </select>
+        </div>
+      </div>
+
+      <p id="result-count" aria-live="polite"></p>
+
+      <div class="listing-grid" id="listing-grid"></div>
+      <p id="empty-message" class="empty-message hidden">No listings match your search</p>
+
+      <footer class="cart-summary">
+        <p id="saved-total">Total value of saved items: Rs 0</p>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
